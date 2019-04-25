@@ -1,0 +1,15 @@
+<p>
+  card works quite the correct speed!
+</p>
+<h1>my Cards</h1>
+<hr>
+<div class='container'>
+  <div class="row" *ngFor="let card of cards; let i = 'index'">
+<div class="row">
+  <h4 id="{{i}}" appStrikethrough>{{card.name}}due on{{card.completeDate|date|uppercase}}</h4>
+  <button class="btn btn-primary" (click)='toggleDetails(i)'>Toogle Details</button>
+          </div> 
+
+     </div>
+            </div>
+            <p *ngIf='cards.length > 5'>You have too many cards</p>
